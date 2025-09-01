@@ -68,7 +68,9 @@
     </div>
     <div>
       <label>Imagen (opcional)</label>
-      <input type="file" name="corrections_img[]" accept="image/*" capture="environment">
+      <!-- CAMBIO PRINCIPAL: Removido capture="environment" para permitir galería -->
+      <input type="file" name="corrections_img[]" accept="image/*">
+      <small class="help-text">Puedes tomar una foto o seleccionar de la galería</small>
     </div>
     <div>
       <label>Descripción</label>
@@ -112,6 +114,14 @@
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: #555;
+}
+
+/* Estilo para el texto de ayuda */
+.help-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
